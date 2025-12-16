@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True HR Certification | The Global Standard for HR Excellence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A3D78;
+            --primary-light: #2c5daa;
+            --primary-dark: #062a56;
+            --accent: #1FB34A;
+            --accent-light: #4cd471;
+            --accent-dark: #16953d;
+            --gray: #7A7A7A;
+            --gray-light: #a0a0a0;
+            --gray-dark: #5a5a5a;
+            --light: #f8fafc;
+            --dark: #2c3e50;
+            --bronze: #cd7f32;
+            --silver: #c0c0c0;
+            --gold: #ffd700;
+            --platinum: #e5e4e2;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(10, 61, 120, 0.1);
+            --radius: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(10, 61, 120, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-img {
+            height: 100px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+        
+        .logo-text span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s;
+            border-radius: 2px;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(10, 61, 120, 0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: var(--white);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(10, 61, 120, 0.25);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="white" opacity="0.05"/><path d="M0,0 L100,0 L100,100 Z" fill="white" opacity="0.03"/></svg>');
+        }
+        
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .secondary-button {
+            background-color: transparent;
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid var(--white);
+            font-size: 1rem;
+        }
+        
+        .secondary-button:hover {
+            background-color: var(--white);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        /* Certification Tiers */
+        .tiers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .tier-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .tier-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(10, 61, 120, 0.15);
+        }
+        
+        .tier-header {
+            padding: 25px 20px;
+            color: var(--white);
+        }
+        
+        .bronze .tier-header {
+            background-color: var(--bronze);
+        }
+        
+        .silver .tier-header {
+            background-color: var(--silver);
+            color: var(--dark);
+        }
+        
+        .gold .tier-header {
+            background-color: var(--gold);
+            color: var(--dark);
+        }
+        
+        .platinum .tier-header {
+            background-color: var(--platinum);
+            color: var(--dark);
+        }
+        
+        .tier-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .tier-rating {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .tier-body {
+            padding: 25px 20px;
+        }
+        
+        .tier-body p {
+            margin-bottom: 20px;
+            color: var(--gray);
+            min-height: 60px;
+        }
+        
+        .tier-audience {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-top: 15px;
+            border-top: 1px solid var(--light);
+        }
+        
+        /* Badges Display */
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .badge-display {
+            text-align: center;
+            background-color: var(--white);
+            padding: 30px 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            width: 220px;
+            border-top: 3px solid var(--accent);
+        }
+        
+        .badge-img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+        
+        .badge-display h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .badge-display p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Certificate Display */
+        .certificate-display {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(10, 61, 120, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            border: 1px solid rgba(10, 61, 120, 0.1);
+        }
+        
+        .certificate-header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .certificate-body {
+            padding: 40px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid rgba(10, 61, 120, 0.1);
+        }
+        
+        .certificate-footer {
+            padding: 25px;
+            text-align: center;
+            background-color: var(--white);
+        }
+        
+        .certificate-img {
+            width: 100%;
+            max-width: 700px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .certificate-company {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 20px 0;
+        }
+        
+        .certificate-level {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--accent-dark);
+            margin: 20px 0;
+        }
+        
+        .certificate-date {
+            color: var(--gray);
+            margin-top: 20px;
+            font-style: italic;
+        }
+        
+        /* Process Section */
+        .process-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .process-step {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            text-align: center;
+            width: 220px;
+            box-shadow: var(--shadow);
+            position: relative;
+            border-top: 3px solid var(--accent);
+        }
+        
+        .process-step:not(:last-child):after {
+            content: '→';
+            position: absolute;
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--gray-light);
+            font-weight: bold;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .process-step h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .process-step p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .benefit-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .benefit-card p {
+            color: var(--gray);
+        }
+        
+        /* Apply Now Section */
+        .apply-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .apply-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .apply-container h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .apply-container p {
+            opacity: 0.9;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .footer-logo span {
+            color: var(--accent);
+        }
+        
+        .footer-about p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .footer-links h4, .footer-contact h4 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .footer-links h4:after, .footer-contact h4:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .process-step:not(:last-child):after {
+                display: none;
+            }
+            
+            .process-container {
+                gap: 20px;
+            }
+            
+            .process-step {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 20px;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .process-step {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tiers-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .certificate-display {
+                margin: 0 -10px;
+                border-radius: 0;
+            }
+            
+            .certificate-body {
+                padding: 30px 20px;
+            }
+            
+            .certificate-company {
+                font-size: 1.6rem;
+            }
+            
+            .badge-display {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- Replace "truehr-logo.png" with your actual logo file name -->
+                <img src="images/logo.png" alt="True HR Certification Logo" class="logo-img">
+                <div class="logo-text">True <span>HR</span> Certification</div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#certification">Certification</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#apply" class="cta-button">Apply Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>The Global Standard for HR Operational Excellence</h1>
+                <p>True HR Certification provides independent validation of your HR department's documentation quality, process integrity, and compliance standards. Join the elite companies recognized for HR excellence.</p>
+                <div class="hero-buttons">
+                    <a href="#certification" class="cta-button">Explore Certification</a>
+                    <a href="#process" class="secondary-button">Learn the Process</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why True HR Certification?</h2>
+                <p class="section-subtitle">We provide objective, evidence-based validation of your HR operations through a rigorous audit of documentation, processes, and compliance standards.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Risk Mitigation</h3>
+                    <p>Identify compliance gaps proactively before they become legal issues. Our audit helps you stay ahead of regulatory requirements.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Talent Attraction</h3>
+                    <p>Display our certification badge to attract quality-conscious candidates who value professional, fair workplaces.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investor Confidence</h3>
+                    <p>Demonstrate due diligence in people operations to investors, enhancing your company's valuation and credibility.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Process Standardization</h3>
+                    <p>Establish consistent, documented HR processes that scale with your company's growth and ensure fairness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Tiers -->
+    <section class="section" id="certification">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certification Tiers</h2>
+                <p class="section-subtitle">Four levels of HR operational excellence, from basic compliance to world-class strategic HR.</p>
+            </div>
+            
+            <div class="tiers-container">
+                <!-- Bronze Tier -->
+                <div class="tier-card bronze">
+                    <div class="tier-header">
+                        <div class="tier-name">BRONZE</div>
+                        <div class="tier-rating">Basic Compliance</div>
+                    </div>
+                    <div class="tier-body">
+                        <p>Foundational HR documentation is legally compliant and in place.</p>
+                        <div class="tier-audience">Startups & Small Businesses</div>
+                    </div>
+                </div>
+                
+                <!-- Silver Tier -->
+                <div class="tier-card silver">
+                    <div class="tier-header">
+                        <div class="tier-name">SILVER</div>
+                        <div class="tier-rating">Standardized HR Ops</div>
+                    </div>
+                    <div class="tier-body">
+                        <p>Strong documentation with evidence of consistent process adherence.</p>
+                        <div class="tier-audience">Growing Companies</div>
+                    </div>
+                </div>
+                
+                <!-- Gold Tier -->
+                <div class="tier-card gold">
+                    <div class="tier-header">
+                        <div class="tier-name">GOLD</div>
+                        <div class="tier-rating">Best-Practice HR</div>
+                    </div>
+                    <div class="tier-body">
+                        <p>High maturity HR operations with internal audits and automation.</p>
+                        <div class="tier-audience">Established Firms</div>
+                    </div>
+                </div>
+                
+                <!-- Platinum Tier -->
+                <div class="tier-card platinum">
+                    <div class="tier-header">
+                        <div class="tier-name">PLATINUM</div>
+                        <div class="tier-rating">World-Class HR</div>
+                    </div>
+                    <div class="tier-body">
+                        <p>Fully compliant HR integrated with strategic, predictive capabilities.</p>
+                        <div class="tier-audience">Market Leaders</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Process -->
+    <section class="section" id="process" style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certification Process</h2>
+                <p class="section-subtitle">Our rigorous, transparent audit process ensures credibility and consistency across all certifications.</p>
+            </div>
+            
+            <div class="process-container">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Application</h3>
+                    <p>Submit your company details and select desired certification tier.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Self-Assessment</h3>
+                    <p>Complete our online self-assessment and upload required documents.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Audit</h3>
+                    <p>Our certified auditors review your documentation and processes.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Gap Analysis</h3>
+                    <p>Receive detailed report with scores and improvement recommendations.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>Certification</h3>
+                    <p>Upon meeting standards, receive your certification badge and certificate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Badges Display -->
+<section class="section" id="badges">
+    <div class="container">
+        <div class="section-title">
+            <h2>Certification Badges</h2>
+            <p class="section-subtitle">Display your achievement with our tier-specific certification badges.</p>
+        </div>
+        
+        <div class="badges-container">
+            <div class="badge-display">
+                <img src="images/badge-bronze.png" alt="Bronze Badge" class="badge-img">
+                <h3>Bronze Badge</h3>
+                <p>For companies with foundational HR compliance.</p>
+            </div>
+            
+            <div class="badge-display">
+                <img src="images/badge-silver.png" alt="Silver Badge" class="badge-img">
+                <h3>Silver Badge</h3>
+                <p>For companies with standardized HR operations.</p>
+            </div>
+            
+            <div class="badge-display">
+                <img src="images/badge-gold.png" alt="Gold Badge" class="badge-img">
+                <h3>Gold Badge</h3>
+                <p>For companies with best-practice HR maturity.</p>
+            </div>
+            
+            <div class="badge-display">
+                <img src="images/badge-platinum.png" alt="Platinum Badge" class="badge-img">
+                <h3>Platinum Badge</h3>
+                <p>For companies with world-class strategic HR.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Certificate Display -->
+    <section class="section" id="certificate" style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certificate of Recognition</h2>
+                <p class="section-subtitle">Upon successful certification, your company will receive this official certificate.</p>
+            </div>
+            
+            <div class="certificate-display">
+                <div class="certificate-header">
+                    <h2 style="color: white; margin-bottom: 10px;">True HR Certification</h2>
+                    <p style="opacity: 0.9;">Recognizing Excellence in People Practices</p>
+                </div>
+                
+                <div class="certificate-body">
+                    <!-- Replace "certificate-image.png" with your actual certificate image file name -->
+                    <img src="images/certificate.png" alt="True HR Certificate Example" class="certificate-img">
+                    
+                    <div class="certificate-date">
+                        <p>This certificate is valid from January 2025 till January 2026.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-footer">
+                    <div style="border-top: 2px solid rgba(10, 61, 120, 0.1); padding-top: 20px; width: 60%; margin: 0 auto;">
+                        <p style="font-weight: 600; margin-bottom: 5px; color: var(--primary);">Mark Wilkins</p>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Chief Certification Officer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Now Section -->
+    <section class="apply-section" id="apply">
+        <div class="container">
+            <div class="apply-container">
+                <h2>Ready to Get Certified?</h2>
+                <p>Join leading companies in demonstrating HR operational excellence. Start your certification journey today.</p>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                    <a href="#contact" class="cta-button" style="background-color: var(--accent); border-color: var(--accent);">Apply Now</a>
+                    <a href="#process" class="secondary-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">True <span>HR</span> Certification</div>
+                    <p>The global standard for HR operational excellence. Independent validation of HR documentation, processes, and compliance standards.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#certification">Certification Tiers</a></li>
+                        <li><a href="#process">Certification Process</a></li>
+                        <li><a href="#badges">Certification Badges</a></li>
+                        <li><a href="#apply">Apply Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Business District, Suite 500, New York, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@truehrcertification.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM EST</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 True HR Certification. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.7); text-decoration: underline;">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7); text-decoration: underline;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            
+            // Change icon
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission handling (for demonstration)
+        const applyButtons = document.querySelectorAll('a[href="#apply"]');
+        applyButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (button.getAttribute('href') === '#apply') {
+                    e.preventDefault();
+                    alert('Thank you for your interest in True HR Certification! Our team will contact you shortly to begin the application process.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
